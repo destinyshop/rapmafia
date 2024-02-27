@@ -96,16 +96,25 @@
     <div class="background"></div>
     <div class="content">
         <div class="circle"></div>
-        <audio autoplay loop>
+        <div class="button-container">
+            <button class="button" onclick="playAudio()">Reproducir</button>
+        </div>
+        <audio id="myAudio" loop>
             <source
                 src="https://github.com/destinyshop/rapmafia/raw/main/Y2meta.app%20-%20Alexa%20Mafia%20_Rap%20Oficial_%20(320%20kbps).mp3"
                 type="audio/mp3">
             Tu navegador no soporta el elemento de audio.
         </audio>
-        <div class="button-container">
-
-        </div>
     </div>
+
+    <script>
+        function playAudio() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+            var button = document.querySelector(".button");
+            button.style.display = "none";
+        }
+    </script>
 </body>
 
 </html>
